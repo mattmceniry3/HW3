@@ -1,4 +1,5 @@
 body {background:lightblue;
       font-family: "CG-Omega";}
-h1 {font-weight: bold; font-style:italic; color:white}
-td {font-style:italic; color:white}
+h1 {text-align:center; font-weight: bold; font-style:italic; color:white}
+tr {text-align: center; font-style:italic; color:white}
+hr {width:300px; noshade:no}

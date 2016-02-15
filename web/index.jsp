@@ -15,12 +15,13 @@
     
     <body>
         <h1>Simple Salary Calculator</h1>
-<form>    
+        <hr></hr>
+<form name="indexForm" action="results.jsp" method="post">
 <table>
 <tbody>    
     <tr>
         <td>Hours Worked:</td>
-        <td><input type="number" name="hours" value="" size="25"></td>
+        <td><input type="number" name="hours" value="" size="25" required></td>
     </tr>
     
     <tr>
@@ -41,7 +42,7 @@
 <table>
     
     <input type="reset" value="Clear" id="clear">
-    <input type="submit" value="Submit" id="submit"
+    <input type="submit" value="Submit" id="submit">
 </form>
   
     </body>
