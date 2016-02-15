@@ -1,5 +1,6 @@
 body {background:lightblue;
       font-family: "CG-Omega";}
-h1 {text-align:center; font-weight: bold; font-style:italic; color:white}
-tr {text-align: center; font-style:italic; color:white}
-hr {width:300px; noshade:no}
+h1 {text-align: center; font-weight: bold; font-style:italic; color:white}
+tr {font-style:italic; color:white}
+hr {width:350px; noshade:no}
+form {margin: 0 auto; width:350px;}
