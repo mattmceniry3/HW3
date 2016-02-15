@@ -18,7 +18,8 @@
         Double hourlyWage = Double.parseDouble(request.getParameter("pay"));
         Double postTaxDed = Double.parseDouble(request.getParameter("postTax"));
         Double preTaxDed = Double.parseDouble(request.getParameter("preTax"));
-        %>
+      
+    %>
         
     <body>
         <h1>Salary Info</h1>
