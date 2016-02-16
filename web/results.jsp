@@ -19,13 +19,10 @@
         Double postTaxDed = Double.parseDouble(request.getParameter("postTax"));
         Double preTaxDed = Double.parseDouble(request.getParameter("preTax"));
       
-        Double otHour = hoursWorked - 40;
+        Double otHour = 0.00;
         Double otRate = hourlyWage * 1.5;
         Double grossPay = hoursWorked * hourlyWage;
-        Double preTaxPay = grossPay - preTaxDed;
-        Double taxAmt = preTaxPay * .22;
-        Double postTaxPay = preTaxPay - taxAmt;
-        Double netPay = postTaxPay - postTaxDed;
+        Double taxAmt = 0.00;
         Double regHours = 40.00;
         
         if(hoursWorked > 40) {
@@ -35,24 +32,23 @@
             double otPay = otHour * otRate;
             double regPay = regHours * hourlyWage;
             grossPay = regPay + otPay;
-            preTaxPay = grossPay - preTaxDed;
-            postTaxPay = preTaxPay - taxAmt;
-            netPay = postTaxPay - postTaxDed;
-           
-            if(grossPay < 500) {
-            taxAmt = preTaxPay * .18;
-        }
+          }
         
         else{
-            taxAmt = preTaxPay *.22;
+            grossPay = hoursWorked * hourlyWage;
         } 
         
+        Double preTaxPay = grossPay - preTaxDed;
+        
+        if(grossPay < 500) {
+            taxAmt = preTaxPay * .18;
         }
         else {
-            grossPay = hoursWorked * hourlyWage;
+            taxAmt = preTaxPay * .22;
         }
         
-       
+       Double postTaxPay = preTaxPay - taxAmt;
+       Double netPay = postTaxPay - postTaxDed;
        
     %>
         
